@@ -39,7 +39,7 @@ setup(
     author_email=metadata['__email__'],
     url='https://www.github.com/johnathanvidu/ppman',
     packages=find_packages(exclude=['docs', 'tests*']),
-    entry_points={"console_scripts": ["ppman=ppman.cli:main"]},
+    entry_points={"console_scripts": ["ppman=ppman.bootstrap:cli"]},
     install_requires=requirements,
     tests_require=tests_requirements
 )

@@ -1,6 +1,6 @@
 import click
 
 
-@click.command
+@click.group()
 def cli():
-    click.echo('entry point - success')
+    pass
