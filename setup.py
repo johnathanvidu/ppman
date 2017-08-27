@@ -14,7 +14,9 @@ def get_package_metadata(*package_metadata_path):
 # collecting our prize
 metadata = get_package_metadata('ppman', '_metadata.py')
 
-test_require = []
+# minimum required packages for ppman to work
+requirements = ['click']
+tests_requirements = []
 
 setup(
     name="ppman",
@@ -38,5 +40,6 @@ setup(
     url='https://www.github.com/johnathanvidu/ppman',
     packages=find_packages(exclude=['docs', 'tests*']),
     entry_points={"console_scripts": ["ppman=ppman.cli:main"]},
-    test_require=test_require
+    install_requires=requirements,
+    tests_require=tests_requirements
 )
